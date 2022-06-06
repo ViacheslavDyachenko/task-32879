@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "20 Kopeek"; 
+    src: url("./assets/fonts/20Kopeek-Book.ttf") format("truetype"),
+    url("./assets/fonts/20Kopeek-Book.woff") format("woff"),
+    url("./assets/fonts/20Kopeek-Book.woff2") format("woff2");
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+body {
+    background-color: #898989;
+    height: 3000px;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* ======================= */
+/* стали для обоих модалок */
+/* ======================= */
+.sale-popup,
+.thanks-popup {
+    position: fixed;
+    margin: 50vh 50vw;
+    transform: translate(-50%, -50%);
+    max-width: 640px;
+    width: 70vw;
+    height: 565px;
+}
+
+.sale-popup__close-btn,
+.thanks-popup__close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.sale-popup__title,
+.thanks-popup__title {
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 20px;
+}
+
+.sale-popup__description,
+.thanks-popup__description {
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+    width: 300px;
+}
+
+/* =========================================== */
+/* ======== Стили для первой модалки ========= */
+/* =========================================== */
+
+.sale-popup__img-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    background-image: url(./assets/popupBgc.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 310px;
+}
+
+.sale-popup__form-section {
+    background-color: #fff;
+    height: 255px;
+}
+
+.sale-popup__input-block {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    width: 100%;
+}
+
+.sale-popup__input {
+    max-width: 270px;
+    width: 40%;
+    height: 50px;
+    border: 1px solid #C9CDD3;
+    padding-left: 20px;
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.sale-popup__input::placeholder {
+    color: #717A8C;
+}
+
+.sale-popup__input:focus-visible {
+    outline: none;
+}
+
+.sale-popup__policy {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 560px;
+    width: 90%;
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    color: #717A8C;
+}
+
+.sale-popup__policy > a {
+    text-decoration: none;
+    color: #3483b8;
+}
+
+.sale-popup__button-submit {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 45px;
+    background-color: #4A6A8B;
+    border: none;
+    border-radius: 4px;
+    font-family: '20 Kopeek';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+}
+
+@media screen and (max-width: 670px) {
+    .sale-popup {
+        height: fit-content;
+        width: calc(100% - 40px);
+    }
+    .sale-popup__img-section {
+        height: 165px;
+        background-position: 50% 0;
+        padding-left: 20px;
+    }
+    .sale-popup__title,
+    .sale-popup__description {
+        position: relative;
+        top: 140px;
+
+    }
+    .sale-popup__description {
+        max-width: 275px;
+        width: calc(100% - 20px);
+    }
+    .sale-popup__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .sale-popup__form-section {
+        height: 440px;
+        padding-top: 90px;
+    }
+    .sale-popup__input-block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 30px;
+        height: 150px;
+    }
+    .sale-popup__input {
+        max-width: calc(100% - 40px);
+        width: 100%;
+    }
+}
+
+/* =================================================== */
+/* ============ Стили для второй модалки ============= */
+/* =================================================== */
+
+.thanks-popup {
+    display: none;
+    background-color: #fff;
+    padding: 75px 0 0 60px;
+    min-height: 260px;
+    height: fit-content;
+}
+
+@media screen and (max-width: 670px) {
+    .thanks-popup {
+        padding-left: 20px;
+        width: calc(100% - 40px);
+    }
+    .thanks-popup__description {
+        max-width: 300px;
+        width: calc(100% - 20px);
+    }
+}

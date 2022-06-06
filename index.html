@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <link rel="stylesheet" href="./style.css"> <!-- стили обоих модалок -->
+    <script src="./script.js" defer></script> <!-- скрипты управления модалками -->
+</head>
+<body>
+    <!-- ============== Первая модалка ============== -->
+    <div class="sale-popup" id="sale-popup">
+        <button class="sale-popup__close-btn" id="sale-popup__close-btn">
+            <img src="./assets/closeBtn.svg" alt="X">
+        </button>
+        <div class="sale-popup__img-section">
+            <h1 class="sale-popup__title">Скидка 10%</h1>
+            <p class="sale-popup__description">Подпишитесь на email-рассылку и получите скидку на первую покупку</p>
+        </div>
+        <form class="sale-popup__form-section">
+            <div class="sale-popup__input-block">
+                <input placeholder="Введите email" type="text" class="sale-popup__input">
+                <input placeholder="Имя" type="text" class="sale-popup__input">
+            </div>
+            <p class="sale-popup__policy">Нажимая на кнопку, я даю <a href="#">Cогласие на обработку персональных данных</a>, принимаю <a href="#">Политику конфиденциальности</a> и хочу получать рекламные письма</p>
+            <input type="submit" class="sale-popup__button-submit" id="sale-popup__button-submit" value="Получить скидку">
+        </form>
+    </div>
+    <!-- =============================================== -->
+    <!-- =============== Вторая модалка ================ -->
+    <div class="thanks-popup" id="thanks-popup">
+        <button class="thanks-popup__close-btn" id="thanks-popup__close-btn">
+            <img src="./assets/closeBtn.svg" alt="X">
+        </button>
+        <h1 class="thanks-popup__title">Спасибо</h1>
+        <p class="thanks-popup__description">Мы отправили промокод на скидку 10% на ваш email</p>
+    </div>
+    <!-- =============================================== -->
+</body>
+</html>

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Kazimir';
+    src: url('Kazimir-Regular.woff2') format('woff2'),
+        url('Kazimir-Regular.woff') format('woff'),
+        url('Kazimir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: '20 Kopeek Book';
+    src: url('20Kopeek-Book.woff2') format('woff2'),
+        url('20Kopeek-Book.woff') format('woff'),
+        url('20Kopeek-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Syne';
+    src: url('Syne/Syne-VariableFont_wght.ttf') format('truetype');
+}
